@@ -6,15 +6,15 @@ const Usuario = db.define('usuario', {
         primaryKey: true,
         autoIncrement: true
     },
-    firstName: {
+    primeiroNome: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    lastName: {
+    sobrenome: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    age: {
+    idade: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
@@ -22,23 +22,23 @@ const Usuario = db.define('usuario', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    phone: {
+    telefone: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    address: {
+    endereco: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    city: {
+    cidade: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    state: {
+    estado: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthDate: {
+    aniversario: {
         type: DataTypes.STRING(10),
         allowNull: false
     },
