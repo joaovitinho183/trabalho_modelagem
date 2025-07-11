@@ -16,4 +16,12 @@ const apagar = async (req, res) => {
 
 }
 
-module.exports = { cadastrar, listar, atualizar, apagar }
+const consultaID = async (req, res) => {
+
+}
+
+const consultaNome = async (req, res) => {
+
+}
+
+module.exports = { cadastrar, listar, atualizar, apagar, consultaID, consultaNome }
