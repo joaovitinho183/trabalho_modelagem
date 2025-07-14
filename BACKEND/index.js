@@ -33,6 +33,7 @@ app.post('/compra', controllerCompra.cadastrar)
 app.get('/compra', controllerCompra.listar)
 app.put('/compra/:id', controllerCompra.atualizar)
 app.delete('/compra/:id', controllerCompra.apagar)
+app.delete('/compra/:id', controllerCompra.consultaID)
 
 app.get('/', async (req, res) => {
     res.status(200).json({ message: 'Aplicação Rodando!!' })
