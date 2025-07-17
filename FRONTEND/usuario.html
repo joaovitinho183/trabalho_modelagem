@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Susuario.css">
-    <script src="cadastrarUsuario.js" defer></script>
+    <!-- <link rel="stylesheet" href="Susuario.css"> -->
+    <script src="Usuario.js" defer></script>
     <title>Usuario View</title>
 </head>
+
 <body>
     <header>
         <nav>
@@ -17,6 +19,8 @@
     <main>
         <h1>Sistema de Compras - Versão Piloto</h1>
 
+        <!-- CADASTRAR -->
+
         <label for="primeiroNome">Digite seu primeiro Nome:</label><br>
         <input type="text" id="primeiroNome" placeholder="ex: Felipe"><br><br>
 
@@ -24,7 +28,7 @@
         <input type="text" id="sobrenome" placeholder="ex: Siva"><br><br>
 
         <label for="idade">Informe a sua Idade:</label><br>
-        <input type="number" id="idade" ><br><br>
+        <input type="number" id="idade"><br><br>
 
         <label for="email">Digite seu Email:</label><br>
         <input type="text" id="email" placeholder="ex: felipe@gmail.com"><br><br>
@@ -44,11 +48,77 @@
         <label for="aniversario">Informe sua Data de Aniversario:</label><br>
         <input type="date" id="aniversario"><br><br>
 
-        <button id="btnCadastrar">Cadastrar</button>
-        <div id="res"></div>
+        <button id="btnCadastrar">Cadastrar</button><br>
+        <div id="resCadastrar"></div><br><br>
+
+        <!-- LISTAR -->
+
+        <button id="btnListar">Listar</button><br>
+        <div id="resListar"></div><br><br>
+
+        <!-- ATUALIZAR -->
+
+        <label for="id_usuario">Informe o codigo do Usuario:</label><br>
+        <input type="number" id="id_usuario"><br><br>
+
+        <label for="primeiroNome">Digite seu primeiro Nome:</label><br>
+        <input type="text" id="primeiroNome" placeholder="ex: Felipe"><br><br>
+
+        <label for="sobrenome">Digite seu Sobrenome:</label><br>
+        <input type="text" id="sobrenome" placeholder="ex: Siva"><br><br>
+
+        <label for="idade">Informe a sua Idade:</label><br>
+        <input type="number" id="idade"><br><br>
+
+        <label for="email">Digite seu Email:</label><br>
+        <input type="text" id="email" placeholder="ex: felipe@gmail.com"><br><br>
+
+        <label for="telefone">Informe seu Telefone:</label><br>
+        <input type="text" id="telefone" placeholder="ex: (12) 3456-7890"><br><br>
+
+        <label for="endereco">Digite seu Endereço:</label><br>
+        <input type="text" id="endereco" placeholder="ex: R.Geral N.456"><br><br>
+
+        <label for="cidade">Informe sua Cidade:</label><br>
+        <input type="text" id="cidade" placeholder="ex: Itapema"><br><br>
+
+        <label for="estado">Informe seu Estado:</label><br>
+        <input type="text" id="estado" placeholder="ex: Sanata Catarina"><br><br>
+
+        <label for="aniversario">Informe sua Data de Aniversario:</label><br>
+        <input type="date" id="aniversario"><br><br>
+
+        <button id="btnAtualizar">Atualizar</button><br>
+        <div id="resAtualizar"></div><br><br>
+
+        <!-- APAGAR -->
+
+        <label for="id_usuario">Informe codigo do Usuario:</label><br>
+        <input type="number" id="id_usuario"><br><br>
+
+        <button id="btnApagar">Apagar</button><br>
+        <div id="resApagar"></div><br><br>
+
+        <!-- BUSCAR POR ID -->
+
+        <label for="id_usuario">Informe o codigo do Usuario:</label><br>
+        <input type="text" id="id_usuario"><br><br>
+
+        <button id="btnBuscarID">BuscarID</button><br>
+        <div id="resBuscarID"></div><br><br>
+
+        <!-- BUSCAR POR NOME -->
+
+        <label for="primeiroNome">Informe o primeiro nome do Usuario:</label><br>
+        <input type="text" id="primeiroNome"><br><br>
+
+        <button id="btnBuscarN">BuscarNome</button><br>
+        <div id="resBuscarN"></div><br><br>
+
     </main>
     <footer>
 
     </footer>
 </body>
+
 </html>
