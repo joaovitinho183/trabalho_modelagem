@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0eafc, #cfdef3);
+    padding: 20px;
+    color: #333;
+}
+
+header nav {
+    background-color: #007BFF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main {
+    max-width: 1600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Cabeçalho */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #007BFF;
+}
+
+/* Form Inputs */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Container da tabela com scroll horizontal */
+div[id^="res"] {
+    overflow-x: auto; /* Scroll horizontal ativado */
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 0;
+}
+
+/* Tabela */
+table {
+    width: max-content; /* A tabela vai ter largura do conteúdo, sem limitar */
+    min-width: 100%;    /* mínimo da tabela é 100% do container */
+    border-collapse: collapse;
+    font-size: 16px;
+    background: #fff;
+}
+
+/* Cabeçalho */
+thead th {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    text-align: left;
+    white-space: nowrap; /* Evita quebra dentro das células */
+}
+
+/* Linhas da tabela */
+tbody td {
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap; /* Também evita quebra de texto */
+}
+
+/* Linha alternada para facilitar leitura */
+tbody tr:nth-child(even) {
+    background-color: #f7faff;
+}
+
+/* Evita quebras e mantém tudo alinhado */
+table, th, td {
+    white-space: nowrap;
+}
+

@@ -2,123 +2,112 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="Susuario.css"> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Susuario.css" />
     <script src="Usuario.js" defer></script>
-    <title>Usuario View</title>
+    <title>Usuário View</title>
 </head>
 
 <body>
     <header>
         <nav>
             <a href="index.html">HOME</a>
-            <a href="usuario.html">Usuario</a>
+            <a href="usuario.html">Usuário</a>
         </nav>
     </header>
+
     <main>
         <h1>Sistema de Compras - Versão Piloto</h1>
 
         <!-- CADASTRAR -->
+        <label for="primeiroNome">Digite seu primeiro Nome:</label>
+        <input type="text" id="primeiroNome" placeholder="ex: Felipe" />
 
-        <label for="primeiroNome">Digite seu primeiro Nome:</label><br>
-        <input type="text" id="primeiroNome" placeholder="ex: Felipe"><br><br>
+        <label for="sobrenome">Digite seu Sobrenome:</label>
+        <input type="text" id="sobrenome" placeholder="ex: Silva" />
 
-        <label for="sobrenome">Digite seu Sobrenome:</label><br>
-        <input type="text" id="sobrenome" placeholder="ex: Siva"><br><br>
+        <label for="idade">Informe a sua Idade:</label>
+        <input type="number" id="idade" />
 
-        <label for="idade">Informe a sua Idade:</label><br>
-        <input type="number" id="idade"><br><br>
+        <label for="email">Digite seu Email:</label>
+        <input type="text" id="email" placeholder="ex: felipe@gmail.com" />
 
-        <label for="email">Digite seu Email:</label><br>
-        <input type="text" id="email" placeholder="ex: felipe@gmail.com"><br><br>
+        <label for="telefone">Informe seu Telefone:</label>
+        <input type="text" id="telefone" placeholder="ex: (12) 3456-7890" />
 
-        <label for="telefone">Informe seu Telefone:</label><br>
-        <input type="text" id="telefone" placeholder="ex: (12) 3456-7890"><br><br>
+        <label for="endereco">Digite seu Endereço:</label>
+        <input type="text" id="endereco" placeholder="ex: R. Geral N.456" />
 
-        <label for="endereco">Digite seu Endereço:</label><br>
-        <input type="text" id="endereco" placeholder="ex: R.Geral N.456"><br><br>
+        <label for="cidade">Informe sua Cidade:</label>
+        <input type="text" id="cidade" placeholder="ex: Itapema" />
 
-        <label for="cidade">Informe sua Cidade:</label><br>
-        <input type="text" id="cidade" placeholder="ex: Itapema"><br><br>
+        <label for="estado">Informe seu Estado:</label>
+        <input type="text" id="estado" placeholder="ex: Santa Catarina" />
 
-        <label for="estado">Informe seu Estado:</label><br>
-        <input type="text" id="estado" placeholder="ex: Sanata Catarina"><br><br>
+        <label for="aniversario">Informe sua Data de Aniversário:</label>
+        <input type="date" id="aniversario" />
 
-        <label for="aniversario">Informe sua Data de Aniversario:</label><br>
-        <input type="date" id="aniversario"><br><br>
-
-        <button id="btnCadastrar">Cadastrar</button><br>
-        <div id="resCadastrar"></div><br><br>
+        <button id="btnCadastrar">Cadastrar</button>
+        <button id="btnPovoar">Cadastro em LOTE</button>
+        <div id="resCadastrar"></div>
 
         <!-- LISTAR -->
-
-        <button id="btnListar">Listar</button><br>
-        <div id="resListar"></div><br><br>
+        <button id="btnListar">Listar</button>
+        <div id="resListar"></div>
 
         <!-- ATUALIZAR -->
+        <label for="id_usuarioUpd">Código do Usuário:</label>
+        <input type="number" id="id_usuarioUpd" />
 
-        <label for="id_usuario">Informe o codigo do Usuario:</label><br>
-        <input type="number" id="id_usuario"><br><br>
+        <label for="primeiroNomeUpd">Primeiro Nome:</label>
+        <input type="text" id="primeiroNomeUpd" />
 
-        <label for="primeiroNome">Digite seu primeiro Nome:</label><br>
-        <input type="text" id="primeiroNome" placeholder="ex: Felipe"><br><br>
+        <label for="sobrenomeUpd">Sobrenome:</label>
+        <input type="text" id="sobrenomeUpd" />
 
-        <label for="sobrenome">Digite seu Sobrenome:</label><br>
-        <input type="text" id="sobrenome" placeholder="ex: Siva"><br><br>
+        <label for="idadeUpd">Idade:</label>
+        <input type="number" id="idadeUpd" />
 
-        <label for="idade">Informe a sua Idade:</label><br>
-        <input type="number" id="idade"><br><br>
+        <label for="emailUpd">Email:</label>
+        <input type="text" id="emailUpd" />
 
-        <label for="email">Digite seu Email:</label><br>
-        <input type="text" id="email" placeholder="ex: felipe@gmail.com"><br><br>
+        <label for="telefoneUpd">Telefone:</label>
+        <input type="text" id="telefoneUpd" />
 
-        <label for="telefone">Informe seu Telefone:</label><br>
-        <input type="text" id="telefone" placeholder="ex: (12) 3456-7890"><br><br>
+        <label for="enderecoUpd">Endereço:</label>
+        <input type="text" id="enderecoUpd" />
 
-        <label for="endereco">Digite seu Endereço:</label><br>
-        <input type="text" id="endereco" placeholder="ex: R.Geral N.456"><br><br>
+        <label for="cidadeUpd">Cidade:</label>
+        <input type="text" id="cidadeUpd" />
 
-        <label for="cidade">Informe sua Cidade:</label><br>
-        <input type="text" id="cidade" placeholder="ex: Itapema"><br><br>
+        <label for="estadoUpd">Estado:</label>
+        <input type="text" id="estadoUpd" />
 
-        <label for="estado">Informe seu Estado:</label><br>
-        <input type="text" id="estado" placeholder="ex: Sanata Catarina"><br><br>
+        <label for="aniversarioUpd">Aniversário:</label>
+        <input type="date" id="aniversarioUpd" />
 
-        <label for="aniversario">Informe sua Data de Aniversario:</label><br>
-        <input type="date" id="aniversario"><br><br>
-
-        <button id="btnAtualizar">Atualizar</button><br>
-        <div id="resAtualizar"></div><br><br>
+        <button id="btnAtualizar">Atualizar</button>
+        <div id="resAtualizar"></div>
 
         <!-- APAGAR -->
-
-        <label for="id_usuario">Informe codigo do Usuario:</label><br>
-        <input type="number" id="id_usuario"><br><br>
-
-        <button id="btnApagar">Apagar</button><br>
-        <div id="resApagar"></div><br><br>
+        <label for="id_usuarioDelet">Código do Usuário:</label>
+        <input type="number" id="id_usuarioDelet" />
+        <button id="btnApagar">Apagar</button>
+        <div id="resApagar"></div>
 
         <!-- BUSCAR POR ID -->
-
-        <label for="id_usuario">Informe o codigo do Usuario:</label><br>
-        <input type="text" id="id_usuario"><br><br>
-
-        <button id="btnBuscarID">BuscarID</button><br>
-        <div id="resBuscarID"></div><br><br>
+        <label for="id_usuarioBID">Código do Usuário:</label>
+        <input type="number" id="id_usuarioBID" />
+        <button id="btnBuscarID">BuscarID</button>
+        <div id="resBuscarID"></div>
 
         <!-- BUSCAR POR NOME -->
-
-        <label for="primeiroNome">Informe o primeiro nome do Usuario:</label><br>
-        <input type="text" id="primeiroNome"><br><br>
-
-        <button id="btnBuscarN">BuscarNome</button><br>
-        <div id="resBuscarN"></div><br><br>
-
+        <label for="primeiroNomeBN">Primeiro nome do Usuário:</label>
+        <input type="text" id="primeiroNomeBN" />
+        <button id="btnBuscarN">BuscarNome</button>
+        <div id="resBuscarN"></div>
     </main>
-    <footer>
-
-    </footer>
 </body>
 
 </html>
