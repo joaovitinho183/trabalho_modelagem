@@ -14,7 +14,7 @@ const cadastrar = async (req, res) => {
 
 const listar = async (req, res) => {
     try {
-        const dados = await Usuario.findAll()
+        const dados = await Compra.findAll()
         console.log(dados)
         res.status(200).json(dados)
     } catch (err) {

@@ -7,23 +7,23 @@ const Compra = db.define('compra', {
         autoIncrement: true
     },
     quantidade: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    dataCompra: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    precoU: {
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    dataCompra: {
+        type: DataTypes.DATEONLY,
+        allowNull: false
+    },
+    precoU: {
+        type: DataTypes.REAL(10,2),
+        allowNull: false
+    },
     descontoAplica: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     precoFinal: {
-        type: DataTypes.STRING,
+        type: DataTypes.REAL(10,2),
         allowNull: false
     },
     formaPagamento: {
@@ -31,10 +31,6 @@ const Compra = db.define('compra', {
         allowNull: false
     },
     statusCompra: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    state: {
         type: DataTypes.STRING,
         allowNull: false
     },

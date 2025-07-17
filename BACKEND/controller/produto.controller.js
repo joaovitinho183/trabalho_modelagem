@@ -15,7 +15,7 @@ const cadastrar = async (req, res) => {
 
 const listar = async (req, res) => {
     try {
-        const dados = await Usuario.findAll()
+        const dados = await Produto.findAll()
         console.log(dados)
         res.status(200).json(dados)
     } catch (err) {
@@ -76,7 +76,7 @@ const consultaID = async (req, res) => {
 }
 
 const consultaNome = async (req, res) => {
-    const { nome } = req.body
+    const { nome } = req.params
     try {
         const dados = await Produto.findAll({
             where: { titulo: { [Op.like]: `%${nome}%` } }

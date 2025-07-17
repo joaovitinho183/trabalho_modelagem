@@ -1,10 +1,10 @@
-require('dotenv').config();
 const express = require('express')
 const app = express()
 const cors = require('cors')
 
-const hostname = process.env.DB_HOST
-const PORT = process.env.PORT
+// require('dotenv').config();
+const hostname = 'localhost'
+const PORT = 3000
 
 const conn = require('./bd/conn')
 const controllerUsuario = require('./controller/usuario.controller')
@@ -19,21 +19,21 @@ app.post('/usuario', controllerUsuario.cadastrar)
 app.get('/usuario', controllerUsuario.listar)
 app.put('/usuario/:id', controllerUsuario.atualizar)
 app.delete('/usuario/:id', controllerUsuario.apagar)
-app.delete('/usuario/:id', controllerUsuario.consultaID)
-app.delete('/usuario/:id', controllerUsuario.consultaNome)
+app.get('/usuario/:id', controllerUsuario.consultaID)
+app.get('/usuario/nome/:nome', controllerUsuario.consultaNome)
 
 app.post('/produto', controllerProduto.cadastrar)
 app.get('/produto', controllerProduto.listar)
 app.put('/produto/:id', controllerProduto.atualizar)
 app.delete('/produto/:id', controllerProduto.apagar)
-app.delete('/produto/:id', controllerProduto.consultaID)
-app.delete('/produto/:id', controllerProduto.consultaNome)
+app.get('/produto/:id', controllerProduto.consultaID)
+app.get('/produto/nome/:nome', controllerProduto.consultaNome)
 
 app.post('/compra', controllerCompra.cadastrar)
 app.get('/compra', controllerCompra.listar)
 app.put('/compra/:id', controllerCompra.atualizar)
 app.delete('/compra/:id', controllerCompra.apagar)
-app.delete('/compra/:id', controllerCompra.consultaID)
+app.get('/compra/:id', controllerCompra.consultaID)
 
 app.get('/', async (req, res) => {
     res.status(200).json({ message: 'Aplicação Rodando!!' })

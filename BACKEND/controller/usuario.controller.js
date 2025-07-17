@@ -50,7 +50,7 @@ const apagar = async (req, res) => {
             res.status(404).json({ message: 'Usuario nao encontrado' })
         } else {
             await Usuario.destroy({ where: { id_usuario: id } })
-            res.status(200).json({ message: 'Usuario excluido' })
+            res.status(204).json({ message: 'Usuario excluido' })
             console.log('Usuario Excluido')
         }
     } catch (err) {
@@ -76,7 +76,7 @@ const consultaID = async (req, res) => {
 }
 
 const consultaNome = async (req, res) => {
-    const { nome } = req.body
+    const { nome } = req.params
     try {
         const dados = await Usuario.findAll({
             where: { primeiroNome: { [Op.like]: `%${nome}%` } }
