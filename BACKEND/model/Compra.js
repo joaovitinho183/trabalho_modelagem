@@ -15,15 +15,15 @@ const Compra = db.define('compra', {
         allowNull: false
     },
     precoU: {
-        type: DataTypes.REAL(10,2),
+        type: DataTypes.REAL(10, 2),
         allowNull: false
     },
     descontoAplica: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.FLOAT,
         allowNull: false
     },
     precoFinal: {
-        type: DataTypes.REAL(10,2),
+        type: DataTypes.REAL(10, 2),
         allowNull: false
     },
     formaPagamento: {

@@ -19,11 +19,11 @@ const Produto = db.define('produto', {
         allowNull: false
     },
     preco: {
-        type: DataTypes.REAL(10,2),
+        type: DataTypes.REAL(10, 2),
         allowNull: false
     },
     percentualDesconto: {
-        type: DataTypes.REAL(10,2),
+        type: DataTypes.REAL(10, 2),
         allowNull: false
     },
     estoque: {

@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -36,14 +35,12 @@ main {
     border-radius: 10px;
 }
 
-/* Cabeçalho */
 h1 {
     text-align: center;
     margin-bottom: 25px;
     color: #007BFF;
 }
 
-/* Form Inputs */
 label {
     font-weight: bold;
     display: block;
@@ -72,52 +69,49 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-/* Container da tabela com scroll horizontal */
+
 div[id^="res"] {
-    overflow-x: auto; /* Scroll horizontal ativado */
+    overflow-x: auto;
     width: 100%;
     max-width: 100%;
     padding: 15px 0;
 }
 
-/* Tabela */
 table {
-    width: max-content; /* A tabela vai ter largura do conteúdo, sem limitar */
-    min-width: 100%;    /* mínimo da tabela é 100% do container */
+    width: max-content;
+    min-width: 100%;
     border-collapse: collapse;
     font-size: 16px;
     background: #fff;
 }
 
-/* Cabeçalho */
 thead th {
     background-color: #007BFF;
     color: white;
     padding: 12px 10px;
     text-align: left;
-    white-space: nowrap; /* Evita quebra dentro das células */
+    white-space: nowrap;
 }
 
-/* Linhas da tabela */
 tbody td {
     padding: 12px 10px;
     border-bottom: 1px solid #ddd;
-    white-space: nowrap; /* Também evita quebra de texto */
+    white-space: nowrap;
 }
 
-/* Linha alternada para facilitar leitura */
 tbody tr:nth-child(even) {
     background-color: #f7faff;
 }
 
-/* Evita quebras e mantém tudo alinhado */
-table, th, td {
+table,
+th,
+td {
     white-space: nowrap;
 }
 
-/* Permitir quebra de linha apenas na coluna "Descrição" */
-td[data-label="Descrição"], th:has(> [data-label="Descrição"]) {
+td[data-label="Descrição"],
+th:has(> [data-label="Descrição"]) {
     white-space: normal;
     word-break: break-word;
-    max-width: 250px; /* ou qualquer largura máxima que desejar */
+    max-width: 250px;
 }

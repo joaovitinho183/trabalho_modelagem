@@ -1,3 +1,4 @@
+// Pegando os elementos HTML onde vamos mostrar os resultados
 const resCadastrar = document.getElementById('resCadastrar')
 const resListar = document.getElementById('resListar')
 const resAtualizar = document.getElementById('resAtualizar')
@@ -5,6 +6,7 @@ const resApagar = document.getElementById('resApagar')
 const resBuscarID = document.getElementById('resBuscarID')
 const resBuscarN = document.getElementById('resBuscarN')
 
+// Pegando os botões da página
 const btnCadastrar = document.getElementById('btnCadastrar')
 const btnPovoar = document.getElementById('btnPovoar')
 const btnListar = document.getElementById('btnListar')
@@ -13,8 +15,11 @@ const btnApagar = document.getElementById('btnApagar')
 const btnBuscarID = document.getElementById('btnBuscarID')
 const btnBuscarN = document.getElementById('btnBuscarN')
 
+// Quando clicar no botão de cadastrar usuário
 btnCadastrar.addEventListener('click', (e) => {
-    e.preventDefault()
+    e.preventDefault() // Evita que a página recarregue
+
+    // Pegando os dados digitados nos inputs
     let primeiroNome = document.getElementById('primeiroNome').value
     let sobrenome = document.getElementById('sobrenome').value
     let idade = Number(document.getElementById('idade').value)
@@ -25,6 +30,7 @@ btnCadastrar.addEventListener('click', (e) => {
     let estado = document.getElementById('estado').value
     let aniversario = document.getElementById('aniversario').value
 
+    // Montando um objeto com os dados
     const valores = {
         primeiroNome: primeiroNome,
         sobrenome: sobrenome,
@@ -36,14 +42,15 @@ btnCadastrar.addEventListener('click', (e) => {
         estado: estado,
         aniversario: aniversario,
     }
-    resCadastrar.innerHTML = ''
+    resCadastrar.innerHTML = '' // Limpa o resultado anterior
 
+    // Enviando os dados para a API (cadastro)
     fetch(`http://localhost:3000/usuario`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(valores)
+        body: JSON.stringify(valores) // Envia os dados em formato JSON
     })
         .then(resp => resp.json())
         .then(dados => {
@@ -54,14 +61,18 @@ btnCadastrar.addEventListener('click', (e) => {
         })
 })
 
+// Quando clicar em "Povoar", pega usuários de uma API de testes
 btnPovoar.addEventListener('click', async (e) => {
     e.preventDefault();
     try {
+        // Busca uma lista de usuários falsos
         const api = await fetch('https://dummyjson.com/users');
         const { users } = await api.json();
 
+        // Para cada usuário da lista...
         for (let i = 0; i < users.length; i++) {
             const user = users[i];
+            // Formata os dados no mesmo estilo do sistema
             const valores = {
                 primeiroNome: user.firstName,
                 sobrenome: user.lastName,
@@ -74,6 +85,7 @@ btnPovoar.addEventListener('click', async (e) => {
                 aniversario: user.birthDate,
             };
 
+            // Cadastra o usuário na API local
             await fetch(`http://localhost:3000/usuario`, {
                 method: 'POST',
                 headers: {
@@ -83,6 +95,7 @@ btnPovoar.addEventListener('click', async (e) => {
             });
         }
 
+        // Mensagem de sucesso
         resCadastrar.innerHTML = `Lote de usuários cadastrado com sucesso!`;
 
     } catch (err) {
@@ -92,13 +105,15 @@ btnPovoar.addEventListener('click', async (e) => {
 });
 
 
-
+// Quando clicar no botão "Listar"
 btnListar.addEventListener('click', () => {
-    resListar.innerHTML = '';
+    resListar.innerHTML = ''; // Limpa antes
 
+    // Requisição para buscar todos os usuários cadastrados
     fetch(`http://localhost:3000/usuario`)
         .then(resp => resp.json())
         .then(dados => {
+            // Cria a estrutura da tabela HTML
             let tabela = `
                 <table>
                     <thead>
@@ -117,6 +132,7 @@ btnListar.addEventListener('click', () => {
                     <tbody>
             `;
 
+            // Adiciona cada usuário como uma linha da tabela
             dados.forEach(dad => {
                 tabela += `
                     <tr>
@@ -134,15 +150,19 @@ btnListar.addEventListener('click', () => {
             });
 
             tabela += `</tbody></table>`;
-            resListar.innerHTML = tabela;
+            resListar.innerHTML = tabela; // Mostra a tabela no HTML
         })
         .catch((err) => {
             console.error('erro ao listar o usuario', err)
         });
 });
 
+
+// Atualiza os dados de um usuário
 btnAtualizar.addEventListener('click', (e) => {
     e.preventDefault()
+
+    // Pega os novos dados preenchidos no formulário de atualização
     let id_usuario = Number(document.getElementById('id_usuarioUpd').value)
     let primeiroNome = document.getElementById('primeiroNomeUpd').value
     let sobrenome = document.getElementById('sobrenomeUpd').value
@@ -168,6 +188,7 @@ btnAtualizar.addEventListener('click', (e) => {
     }
     resAtualizar.innerHTML = ''
 
+    // Envia os dados para atualizar na API
     fetch(`http://localhost:3000/usuario/${id_usuario}`, {
         method: 'PUT',
         headers: {
@@ -184,12 +205,15 @@ btnAtualizar.addEventListener('click', (e) => {
         })
 })
 
+
+// Quando clicar no botão de apagar/excluir usuário
 btnApagar.addEventListener('click', (e) => {
     e.preventDefault()
     let id_usuario = Number(document.getElementById('id_usuarioDelet').value)
     console.log(id_usuario)
     resApagar.innerHTML = ''
 
+    // Requisição DELETE para apagar o usuário
     fetch(`http://localhost:3000/usuario/${id_usuario}`, {
         method: 'DELETE',
         headers: {
@@ -208,14 +232,18 @@ btnApagar.addEventListener('click', (e) => {
         })
 })
 
+
+// Busca um usuário pelo ID
 btnBuscarID.addEventListener('click', (e) => {
     e.preventDefault();
     let id_usuario = Number(document.getElementById('id_usuarioBID').value);
     resBuscarID.innerHTML = '';
 
+    // Busca o usuário com aquele ID
     fetch(`http://localhost:3000/usuario/${id_usuario}`)
         .then(resp => resp.json())
         .then(dados => {
+            // Mostra os dados do usuário em forma de tabela
             let tabela = `
                 <table>
                     <thead>
@@ -254,14 +282,18 @@ btnBuscarID.addEventListener('click', (e) => {
         });
 });
 
+
+// Busca usuários pelo primeiro nome
 btnBuscarN.addEventListener('click', (e) => {
     e.preventDefault();
     let primeiroNome = document.getElementById('primeiroNomeBN').value;
     resBuscarN.innerHTML = '';
 
+    // Faz a requisição para buscar pelo nome
     fetch(`http://localhost:3000/usuario/nome/${primeiroNome}`)
         .then(resp => resp.json())
         .then(dados => {
+            // Cria uma tabela com todos os resultados encontrados
             let tabela = `
                 <table>
                     <thead>

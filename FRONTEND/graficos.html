@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sgraficos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Graficos.js" defer></script>
+    <title>Gráficos</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Gráficos do Sistema</h1>
+
+        <section>
+            <h2>Gráfico Produto x Estoque</h2>
+
+            <label for="produtoIdIni">ID Inicial:</label>
+            <input type="number" id="produtoIdIni">
+
+            <label for="produtoIdFim">ID Final:</label>
+            <input type="number" id="produtoIdFim">
+
+            <button onclick="gerarGraficoProduto()">Gerar Gráfico</button>
+            <canvas id="graficoProduto" width="400" height="200"></canvas>
+        </section>
+
+        <section>
+            <h2>Gráfico Usuário x Idade</h2>
+
+            <label for="usuarioIdIni">ID Inicial:</label>
+            <input type="number" id="usuarioIdIni">
+
+            <label for="usuarioIdFim">ID Final:</label>
+            <input type="number" id="usuarioIdFim">
+
+            <button onclick="gerarGraficoUsuario()">Gerar Gráfico</button>
+            <canvas id="graficoUsuario" width="400" height="200"></canvas>
+        </section>
+    </main>
+</body>
+
+</html>
