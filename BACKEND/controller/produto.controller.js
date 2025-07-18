@@ -50,7 +50,7 @@ const apagar = async (req, res) => {
             res.status(404).json({ message: 'Produto nao encontrado' })
         } else {
             await Produto.destroy({ where: { id_produto: id } })
-            res.status(200).json({ message: 'Produto excluido' })
+            res.status(204).json({ message: 'Produto excluido' })
             console.log('Produto Excluido')
         }
     } catch (err) {
@@ -82,7 +82,7 @@ const consultaNome = async (req, res) => {
             where: { titulo: { [Op.like]: `%${nome}%` } }
         })
         if (dados.length === 0) {
-            res.status(404).json({ message: 'Usuário não encontrado' })
+            res.status(404).json({ message: 'Produto não encontrado' })
         } else {
             console.log(dados)
             res.status(200).json(dados)

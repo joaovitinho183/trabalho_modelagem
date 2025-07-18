@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Sproduto.css" />
+    <script src="Produto.js" defer></script>
+    <title>Produto View</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sistema de Compras - Versão Piloto</h1>
+
+        <!-- CADASTRAR -->
+
+        <h2>Cadastrar Produtos:</h2><br><br>
+
+        <label for="titulo">Digite o Titulo do produto:</label>
+        <input type="text" id="titulo" placeholder="ex: bola" />
+
+        <label for="descricao">Digite a sua Descrição do produto:</label>
+        <input type="text" id="descricao" placeholder="ex: cor/tamanho/forma" />
+
+        <label for="categoria">Informe a sua Categoria:</label>
+        <input type="text" id="categoria" />
+
+        <label for="preco">Digite o Preço Unitario(R$):</label>
+        <input type="number" id="preco" placeholder="ex: 15" />
+
+        <label for="percentualDesconto">Informe o Percentual de Desconto(%):</label>
+        <input type="number" id="percentualDesconto" placeholder="ex: 3" />
+
+        <label for="estoque">Informe o Estoque de produtos:</label>
+        <input type="number" id="estoque" placeholder="ex: 34" />
+
+        <label for="marca">Informe a Marca do Produto:</label>
+        <input type="text" id="marca" placeholder="ex: Nike" />
+
+        <label for="imagem">Informe a URL da imagem do produto:</label>
+        <input type="text" id="imagem"
+            placeholder="ex: https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp" />
+
+        <button id="btnCadastrar">Cadastrar</button>
+        <button id="btnPovoar">Cadastro em LOTE</button>
+        <div id="resCadastrar"></div>
+
+        <!-- LISTAR -->
+
+        <h2>Listar Produtos:</h2><br><br>
+
+        <button id="btnListar">Listar</button>
+        <div id="resListar"></div>
+
+        <!-- ATUALIZAR -->
+
+        <h2>Atualizar Produtos:</h2><br><br>
+
+        <label for="id_produtoUpd">Código do Produto:</label>
+        <input type="number" id="id_produtoUpd" />
+
+        <label for="tituloUpd">Digite o Titulo do produto:</label>
+        <input type="text" id="tituloUpd" placeholder="ex: bola" />
+
+        <label for="descricaoUpd">Digite a sua Descrição do produto:</label>
+        <input type="text" id="descricaoUpd" placeholder="ex: cor/tamanho/forma" />
+
+        <label for="categoriaUpd">Informe a sua Categoria:</label>
+        <input type="number" id="categoriaUpd" />
+
+        <label for="precoUpd">Digite o Preço Unitario(R$):</label>
+        <input type="number" id="precoUpd" placeholder="ex: 15" />
+
+        <label for="percentualDescontoUpd">Informe o Percentual de Desconto(%):</label>
+        <input type="number" id="percentualDescontoUpd" placeholder="ex: 3" />
+
+        <label for="estoqueUpd">Informe o Estoque de produtos:</label>
+        <input type="number" id="estoqueUpd" placeholder="ex: 34" />
+
+        <label for="marcaUpd">Informe a Marca do Produto:</label>
+        <input type="text" id="marcaUpd" placeholder="ex: Nike" />
+
+        <label for="imagemUpd">Informe a URL da imagem do produto:</label>
+        <input type="text" id="imagemUpd"
+            placeholder="ex: https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp" />
+
+        <button id="btnAtualizar">Atualizar</button>
+        <div id="resAtualizar"></div>
+
+        <!-- APAGAR -->
+
+        <h2>Apagar Produto:</h2><br><br>
+
+        <label for="id_produtoDelet">Código do Produto:</label>
+        <input type="number" id="id_produtoDelet" />
+
+        <button id="btnApagar">Apagar</button>
+        <div id="resApagar"></div>
+
+        <!-- BUSCAR POR ID -->
+
+        <h2>Buscar Produto por ID:</h2><br><br>
+
+        <label for="id_produtoBID">Código do Produto:</label>
+        <input type="number" id="id_produtoBID" />
+
+        <button id="btnBuscarID">BuscarID</button>
+        <div id="resBuscarID"></div>
+
+        <!-- BUSCAR POR NOME -->
+
+        <h2>Buscar Produto po Titulo:</h2><br><br>
+
+        <label for="tituloBN">Titulo do Produto:</label>
+        <input type="text" id="tituloBN" />
+
+        <button id="btnBuscarN">BuscarTitulo</button>
+        <div id="resBuscarN"></div>
+
+    </main>
+</body>
+
+</html>

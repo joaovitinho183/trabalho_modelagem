@@ -204,7 +204,7 @@ btnApagar.addEventListener('click', (e) => {
             }
         })
         .catch((err) => {
-            console.error('erro ao atualizar o usuario', err)
+            console.error('erro ao apagar o usuario', err)
         })
 })
 

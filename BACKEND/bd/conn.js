@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize')
 // require('dotenv').config();
-const sequelize = new Sequelize('compras_db', 'root', 'senai', {
+const sequelize = new Sequelize('compras_db', 'root', 'key@dbSQL123', {
     host: 'localhost',
     dialect: 'mysql',
     port: 3306

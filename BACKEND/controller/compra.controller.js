@@ -49,7 +49,7 @@ const apagar = async (req, res) => {
             res.status(404).json({ message: 'Compra nao encontrado' })
         } else {
             await Compra.destroy({ where: { id_Compra: id } })
-            res.status(200).json({ message: 'Compra excluido' })
+            res.status(204).json({ message: 'Compra excluido' })
             console.log('Compra Excluido')
         }
     } catch (err) {
