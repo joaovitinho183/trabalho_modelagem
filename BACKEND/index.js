@@ -7,8 +7,8 @@ const cors = require('cors')
 
 // Carrega variáveis do arquivo .env
 require('dotenv').config()
-const hostname = 'localhost'
-const PORT = 3000
+const hostname = process.env.DB_HOST
+const PORT = process.env.PORT  || 3000
 
 // Importa conexão com o banco de dados
 const conn = require('./bd/conn')

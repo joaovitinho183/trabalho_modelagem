@@ -1,8 +1,8 @@
 // Importa a conexão com o banco de dados
-const conn = require('./BACKEND/bd/conn')
+const conn = require('./bd/conn')
 
 // Importa os modelos das tabelas (Usuario, Produto, Compra) já com os relacionamentos definidos
-const { Usuario, Produto, Compra } = require('./BACKEND/model/rel')
+const { Usuario, Produto, Compra } = require('./model/rel')
 
 // Função que vai sincronizar o banco de dados
 async function syncDataBase() {
